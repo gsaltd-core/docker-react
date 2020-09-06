@@ -4,7 +4,7 @@ services:
     - docker
 
 before_install:
-    - docker build -t andybrough/docker-react -f Dockerfile.dev .S
+    - docker build -t andybrough/docker-react -f Dockerfile.dev .
 
 script:
     - docker run -e CI=true andybrough/docker-react npm run test
